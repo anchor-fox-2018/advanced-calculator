@@ -2,19 +2,49 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (input) {
+    this._result = input;
   }
-  add () {
+
+  pie () {
+
+    return Math.PI;
   }
-  subtract () {
+
+  add (input) {
+    this._result += input;
+    return this;
   }
-  multiply () {
+
+  subtract (input) {
+    this._result -= input;
+    return this;
   }
-  divide () {
+
+  multiply (input) {
+    this._result = this._result * input;
+    return this;
   }
-  square () {
+
+  divide (input) {
+    this._result = this._result / input;
+    return this;
   }
+
+  square (input) {
+    for (let i = 0; i < input; i++) {
+      this._result = this._result * this._result;
+    }
+    return this;
+  }
+
   squareRoot () {
+    this._result = Math.sqrt(this._result);
+    return this
+  }
+
+  equals () {
+    return this._result
   }
 }
 
@@ -25,5 +55,8 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+let test = new Calculator(4);
+console.log(test.pie());
 
 module.exports = Calculator
