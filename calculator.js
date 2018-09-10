@@ -7,8 +7,8 @@ class Calculator {
   }
 
   pie () {
-    this._result = Math.PI;
-    return this;
+
+    return Math.PI;
   }
 
   add (input) {
