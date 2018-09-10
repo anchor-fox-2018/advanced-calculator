@@ -2,19 +2,38 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (num) {
+    this._result = num;
   }
-  add () {
+  add (newNum) {
+    this._result += newNum;
+    return this;
   }
-  subtract () {
+  subtract (newNum) {
+    this._result -= newNum;
+    return this;
   }
-  multiply () {
+  multiply (newNum) {
+    this._result *= newNum;
+    return this;
   }
-  divide () {
+  divide (newNum) {
+    this._result /= newNum;
+    return this;
   }
-  square () {
+  square (newNum) {
+    this._result = Math.pow(this._result, newNum);
+    return this;
   }
-  squareRoot () {
+  squareRoot (newNum) {
+    this._result = Math.sqrt(this._result, newNum);
+    return this;
+  }
+  PI () {
+    return Math.PI;
+  }
+  equals() {
+    return `Result: ${this._result}`
   }
 }
 
@@ -27,3 +46,7 @@ class Calculator {
 */
 
 module.exports = Calculator
+
+let calc = new Calculator(0);
+console.log(calc.add(8).subtract(5).multiply(2).divide(2).square(3).subtract(2).squareRoot(3).equals());
+console.log(calc.PI());
