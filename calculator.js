@@ -37,6 +37,10 @@ class Calculator {
     this._result = Math.sqrt(this._result);
     return this
   }
+
+  equals() {
+    return this._result
+  }
 }
 
 /** note : you can use several features from ecmascript, such as:
@@ -48,6 +52,6 @@ class Calculator {
 */
 
 let test = new Calculator(4);
-console.log(test.add(4).multiply(5).squareRoot());
+console.log(test.add(4).multiply(5).squareRoot().equals());
 
 module.exports = Calculator
