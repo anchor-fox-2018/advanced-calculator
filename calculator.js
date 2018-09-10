@@ -4,6 +4,7 @@ class Calculator {
   //write your code here
   constructor (input) {
     this._result = input;
+    this._pie = Math.PI;
   }
 
   add (input) {
