@@ -4,7 +4,11 @@ class Calculator {
   //write your code here
   constructor (input) {
     this._result = input;
-    this._pie = Math.PI;
+  }
+
+  pie () {
+    this._result = Math.PI;
+    return this;
   }
 
   add (input) {
@@ -39,7 +43,7 @@ class Calculator {
     return this
   }
 
-  equals() {
+  equals () {
     return this._result
   }
 }
@@ -53,6 +57,6 @@ class Calculator {
 */
 
 let test = new Calculator(4);
-console.log(test.add(4).multiply(5).squareRoot().equals());
+console.log(test.pie());
 
 module.exports = Calculator
