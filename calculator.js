@@ -1,36 +1,41 @@
 "use strict";
-
-const PI = Math.PI;
-
 class Calculator {
-  constructor(num1, num2) {
-    this.num1 = num1;
-    this.num2 = num2;
+  constructor(num, ) {
+    this._num = num;
   }
 
-  sum() {
-    return this.num1 + this.num2;
+  sum(input) {
+    this._num = this._num + input;
+    return this;
   }
-  substract() {
-    return this.num1 - this.num2;
+  substract(input) {
+    this._num = this._num - input;
+    return this;
   }
-  multiply() {
-    return this.num1 * this.num2;
+  multiply(input) {
+    this._num = this._num * input;
+    return this;
   }
-  divide() {
-    return this.num1 / this.num2;
+  divide(input) {
+    this._num = this._num / input;
+    return this;
   }
-  power() {
-    return this.num1 ^ this.num2;
+  square(input) {
+    this._num = Math.pow(this._num, input);
+    return this;
   }
   sqrt() {
-    return Math.sqrt(this.num1);
+    this._num = Math.sqrt(this._num);
+    return this;
+  }
+  pie() {
+    this._num = this._num * Math.PI;
+    return this;
+  }
+  result() {
+    return `${this._num}`
   }
 }
-
-let hitung = new Calculator(5, 2);
-console.log(hitung.sum().sum(2));
-
 /** note : you can use several features from ecmascript, such as:
 * - Classes
 * - Default Parameters
@@ -40,3 +45,5 @@ console.log(hitung.sum().sum(2));
 */
 
 module.exports = Calculator
+let hitung = new Calculator(5);
+console.log(hitung.sum(1).divide(2).multiply(2).divide(2).square(2).sqrt().pie().result());
