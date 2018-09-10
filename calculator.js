@@ -1,23 +1,41 @@
-'use strict'
-
+"use strict";
 class Calculator {
-  //write your code here
-  constructor () {
+  constructor(num, ) {
+    this._num = num;
   }
-  add () {
+
+  sum(input) {
+    this._num = this._num + input;
+    return this;
   }
-  subtract () {
+  substract(input) {
+    this._num = this._num - input;
+    return this;
   }
-  multiply () {
+  multiply(input) {
+    this._num = this._num * input;
+    return this;
   }
-  divide () {
+  divide(input) {
+    this._num = this._num / input;
+    return this;
   }
-  square () {
+  square(input) {
+    this._num = Math.pow(this._num, input);
+    return this;
   }
-  squareRoot () {
+  sqrt() {
+    this._num = Math.sqrt(this._num);
+    return this;
+  }
+  pie() {
+    this._num = this._num * Math.PI;
+    return this;
+  }
+  result() {
+    return `${this._num}`
   }
 }
-
 /** note : you can use several features from ecmascript, such as:
 * - Classes
 * - Default Parameters
@@ -27,3 +45,5 @@ class Calculator {
 */
 
 module.exports = Calculator
+let hitung = new Calculator(5);
+console.log(hitung.sum(1).divide(2).multiply(2).divide(2).square(2).sqrt().pie().result());
