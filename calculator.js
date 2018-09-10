@@ -2,32 +2,50 @@
 
 class Calculator {
   //write your code here
-  constructor (angka1, angka2) {
-    this._angka1 = angka1
-    this._angka2 = angka2
+  constructor (number) {
     this._pi = Math.PI;
+    this._result = number || 0
   }
 
-  add (angka1,angka2) {
-    return angka1 + angka2;
+  add (number) {
+    this._result += number;
+    return this
   }
-  subtract (angka1, angka2) {
-    return angka1 - angka2;
+  subtract (number) {
+    this._result -= number
+    return this
   }
-  multiply (angka1, angka2) {
-    return angka1 * angka2;
-  }
-
-  divide (angka1, angka2) {
-    return angka1 / angka2;
-  }
-
-  square (num1) {
-    return num1 * num1;
+  multiply (number) {
+    this._result *= number
+    return this
   }
 
-  squareRoot (num1) {
-    return Math.square(num1);
+  divide (number) {
+    this._result /= number;
+    return this
+  }
+
+  square (number) {
+    this._result = number*number;
+    return this
+  }
+
+  squareRoot (number) {
+    this._result = Math.sqrt(this._result)
+    return this
+  }
+
+  pi(pi){
+    return this._pi;
+  }
+
+  power(number){
+    this._result = Math.pow(this._result, number)
+    return this;
+  }
+
+  equals(){
+    return this._result
   }
 }
 
@@ -38,5 +56,7 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+
 
 module.exports = Calculator
