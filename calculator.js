@@ -2,19 +2,32 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (angka1, angka2) {
+    this._angka1 = angka1
+    this._angka2 = angka2
+    this._pi = Math.PI;
   }
-  add () {
+
+  add (angka1,angka2) {
+    return angka1 + angka2;
   }
-  subtract () {
+  subtract (angka1, angka2) {
+    return angka1 - angka2;
   }
-  multiply () {
+  multiply (angka1, angka2) {
+    return angka1 * angka2;
   }
-  divide () {
+
+  divide (angka1, angka2) {
+    return angka1 / angka2;
   }
-  square () {
+
+  square (num1) {
+    return num1 * num1;
   }
-  squareRoot () {
+
+  squareRoot (num1) {
+    return Math.square(num1);
   }
 }
 
