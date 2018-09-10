@@ -2,19 +2,40 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (input) {
+    this._result = input;
   }
-  add () {
+
+  add (input) {
+    this._result += input;
+    return this;
   }
-  subtract () {
+
+  subtract (input) {
+    this._result -= input;
+    return this;
   }
-  multiply () {
+
+  multiply (input) {
+    this._result = this._result * input;
+    return this;
   }
-  divide () {
+
+  divide (input) {
+    this._result = this._result / input;
+    return this;
   }
-  square () {
+
+  square (input) {
+    for (let i = 0; i < input; i++) {
+      this._result = this._result * this._result;
+    }
+    return this;
   }
+
   squareRoot () {
+    this._result = Math.sqrt(this._result);
+    return this
   }
 }
 
@@ -25,5 +46,8 @@ class Calculator {
 * - Template Literals
 * - Method Chaining
 */
+
+let test = new Calculator(4);
+console.log(test.add(4).multiply(5).squareRoot());
 
 module.exports = Calculator
